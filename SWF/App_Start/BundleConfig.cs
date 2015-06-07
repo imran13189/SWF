@@ -10,6 +10,7 @@ namespace SWF
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include("~/Scripts/jquery-{version}.js"));
 
+
             bundles.Add(new ScriptBundle("~/bundles/script").Include("~/Scripts/CustomScript.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/dataTable").Include(

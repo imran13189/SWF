@@ -38,7 +38,10 @@ namespace SWF
                     model.CreatedBy = 1;
                     model.CreatedOn = DateTime.Now;
                     model.CreatedBy = userID;
-                    model.IsSpecificTime = true;
+                    if(!model.IsSpecificTime)
+                    {
+                        model.SpecificTime = "N/A";
+                    }
                     model.IsCompleted = false;
                     db.tblTasks.Add(model);
                     db.SaveChanges();

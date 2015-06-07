@@ -4,17 +4,26 @@
     ViewBag.Title = "Add";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <script src="~/Scripts/jquery.timepicker.js"></script>
 <link href="~/Content/jquery.timepicker.css" rel="stylesheet" />
+
 <script type="text/javascript">
 
 
     $(document).ready(function () {
-        $(".datepicker").datepicker({});
+        $("#TaskTime").datepicker({
+            startDate: new Date(),
+            endDate: '+5d',
+            daysOfWeekDisabled: [0, 6]
+        });
 
-        $('.timePicker').timepicker();
+        $('.timePicker').timepicker({
+            'minTime': '8:00am',
+            'maxTime': '5:00pm',
+        });
 
-
+        $("#specific").hide();
 
 
         $("CheckTime").change(function () {
@@ -26,7 +35,18 @@
 
                 $("#time").hide();
             }
-         });
+        });
+
+
+        $("#IsSpecificTime").click(function () {
+
+            if ($(this).is(':checked')) {
+                $("#specific").show();
+            }
+            else {
+                $("#specific").hide();
+            }
+        });
 
 
     });
@@ -86,11 +106,18 @@
         @Html.ValidationMessageFor(model => model.SpecialRequest)
 
                         </div>
-                    <div class="full-row">
+
+                        <div class="form-group half_width right">
+                            @Html.LabelFor(model => model.IsSpecificTime)
+                            @Html.CheckBoxFor(model => model.IsSpecificTime, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.IsSpecificTime)
+                        </div>
+
+                    <div id="specific" class="full-row">
                             <h4 class="translate_head">Specific time</h4>
                            
-        @Html.TextBoxFor(model => model.SpecificTime, htmlAttributes: new { placeholder = "Specific Time", @class = "timePicker form-control input-lg" })
-        @Html.ValidationMessageFor(model => model.SpecificTime)
+               @Html.TextBoxFor(model => model.SpecificTime, htmlAttributes: new { placeholder = "Specific Time", @class = "timePicker form-control input-lg" })
+             @Html.ValidationMessageFor(model => model.SpecificTime)
 
                         </div>
                        

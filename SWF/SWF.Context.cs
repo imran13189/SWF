@@ -27,7 +27,7 @@ namespace SWF
     
         public DbSet<AppointmentDiary> AppointmentDiaries { get; set; }
         public DbSet<tblAssignedUser> tblAssignedUsers { get; set; }
-        public DbSet<tblTask> tblTasks { get; set; }
         public DbSet<tUser> tUsers { get; set; }
+        public DbSet<tblTask> tblTasks { get; set; }
     }
 }

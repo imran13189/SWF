@@ -7,8 +7,8 @@
       <Diagram DiagramId="3cd7fc56ee334583bc27ce536be67fa8" Name="Diagram1">
         <EntityTypeShape EntityType="SWFModel.AppointmentDiary" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SWFModel.tblAssignedUser" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SWFModel.tblTask" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SWFModel.tUser" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SWFModel.tblTask" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

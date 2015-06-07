@@ -23,22 +23,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tblTasks">
-      <EntityTypeMapping TypeName="SWFModel.tblTask">
-        <MappingFragment StoreEntitySet="tblTasks">
-          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
-          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
-          <ScalarProperty Name="TaskTime" ColumnName="TaskTime" />
-          <ScalarProperty Name="SpecificTime" ColumnName="SpecificTime" />
-          <ScalarProperty Name="SpecialRequest" ColumnName="SpecialRequest" />
-          <ScalarProperty Name="IsSpecificTime" ColumnName="IsSpecificTime" />
-          <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
-          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
-          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tUsers">
       <EntityTypeMapping TypeName="SWFModel.tUser">
         <MappingFragment StoreEntitySet="tUser">
@@ -56,6 +40,22 @@
           <ScalarProperty Name="strRefCode" ColumnName="strRefCode" />
           <ScalarProperty Name="strBestWay" ColumnName="strBestWay" />
           <ScalarProperty Name="blActive" ColumnName="blActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTasks">
+      <EntityTypeMapping TypeName="SWFModel.tblTask">
+        <MappingFragment StoreEntitySet="tblTasks">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+          <ScalarProperty Name="IsSpecificTime" ColumnName="IsSpecificTime" />
+          <ScalarProperty Name="SpecialRequest" ColumnName="SpecialRequest" />
+          <ScalarProperty Name="SpecificTime" ColumnName="SpecificTime" />
+          <ScalarProperty Name="TaskTime" ColumnName="TaskTime" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

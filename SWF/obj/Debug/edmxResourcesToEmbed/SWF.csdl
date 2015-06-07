@@ -20,21 +20,6 @@
     <Property Name="UserID" Type="Int64" />
     <Property Name="CreatedDate" Type="DateTime" Precision="3" />
   </EntityType>
-  <EntityType Name="tblTask">
-    <Key>
-      <PropertyRef Name="TaskId" />
-    </Key>
-    <Property Name="TaskId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TaskName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
-    <Property Name="TaskTime" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="SpecificTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="SpecialRequest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="IsSpecificTime" Type="Boolean" Nullable="false" />
-    <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
-    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
-    <Property Name="AssignedTo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="CreatedBy" Type="Int32" />
-  </EntityType>
   <EntityType Name="tUser">
     <Key>
       <PropertyRef Name="intUserId" />
@@ -57,7 +42,22 @@
   <EntityContainer Name="SWFEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AppointmentDiaries" EntityType="Self.AppointmentDiary" />
     <EntitySet Name="tblAssignedUsers" EntityType="Self.tblAssignedUser" />
-    <EntitySet Name="tblTasks" EntityType="Self.tblTask" />
     <EntitySet Name="tUsers" EntityType="Self.tUser" />
+    <EntitySet Name="tblTasks" EntityType="SWFModel.tblTask" />
   </EntityContainer>
+  <EntityType Name="tblTask">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="TaskTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SpecificTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialRequest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsSpecificTime" Type="Boolean" Nullable="false" />
+    <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="AssignedTo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
 </Schema>

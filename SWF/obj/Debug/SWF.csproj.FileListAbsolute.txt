@@ -19,3 +19,13 @@ G:\SWF (2) latest\SWF\SWF\bin\System.Net.Http.WebRequest.xml
 G:\SWF (2) latest\SWF\SWF\obj\Debug\SWF.dll
 G:\SWF (2) latest\SWF\SWF\obj\Debug\SWF.pdb
 G:\SWF (2) latest\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache
+H:\SWF\SWF\bin\SWF.dll.config
+H:\SWF\SWF\bin\SWF.dll
+H:\SWF\SWF\bin\SWF.pdb
+H:\SWF\SWF\bin\System.Net.Http.dll
+H:\SWF\SWF\bin\System.Net.Http.WebRequest.dll
+H:\SWF\SWF\bin\System.Web.Providers.dll
+H:\SWF\SWF\bin\System.Net.Http.xml
+H:\SWF\SWF\bin\System.Net.Http.WebRequest.xml
+H:\SWF\SWF\obj\Debug\SWF.dll
+H:\SWF\SWF\obj\Debug\SWF.pdb
