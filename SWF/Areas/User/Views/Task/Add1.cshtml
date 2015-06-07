@@ -1,0 +1,104 @@
+﻿@model SWF.tblTask
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery.timepicker.js"></script>
+<link href="~/Content/jquery.timepicker.css" rel="stylesheet" />
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $(".datepicker").datepicker({});
+
+        $('.timePicker').timepicker();
+        $("#SpecificTime").hide();
+
+
+
+        //$("CheckTime").change(function () {
+        //    if ($(this).is(':checked')) {
+
+        //        $("#time").show();
+        //    }
+        //    else {
+
+        //        $("#time").hide();
+        //    }
+        // });
+
+
+        $("#IsSpecificTime").click(function () {
+
+            if($(this).is(':checked'))
+            {
+                $("#SpecificTime").show();
+            }
+            else
+            {
+                $("#SpecificTime").hide();
+            }
+        });
+
+
+    });
+</script>
+<h3 class="login-main-title">New Task</h3>
+<div class="login_bx register_page">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+
+
+        <div class="form-group half_width">
+            @Html.LabelFor(model => model.TaskName)
+
+            @Html.TextBoxFor(model => model.TaskName, htmlAttributes: new { placeholder = "Task Name", @class = "form-control input-lg" })
+            @Html.ValidationMessageFor(model => model.TaskName)
+        </div>
+
+    <div class="form-group half_width right">
+        @Html.LabelFor(model => model.TaskTime)
+
+        @Html.TextBoxFor(model => model.TaskTime, htmlAttributes: new { @Value = DateTime.Now, placeholder = "Task Time", @class = "datepicker form-control input-lg" })
+        @Html.ValidationMessageFor(model => model.TaskTime)
+    </div>
+
+    <div class="form-group half_width right">
+        @Html.LabelFor(model => model.SpecificTime)
+
+        @Html.TextBoxFor(model => model.SpecificTime, htmlAttributes: new { placeholder = "Task Time", @class = "timePicker form-control input-lg" })
+        @Html.ValidationMessageFor(model => model.SpecificTime)
+    </div>
+
+    <div class="form-group half_width right">
+        @Html.LabelFor(model => model.SpecialRequest)
+
+        @Html.TextBoxFor(model => model.SpecialRequest, htmlAttributes: new {placeholder="Special Request", @class = "form-control input-lg" })
+        @Html.ValidationMessageFor(model => model.SpecialRequest)
+    </div>
+
+    <div class="form-group half_width right">
+        @Html.LabelFor(model => model.IsSpecificTime)
+
+        @Html.CheckBoxFor(model => model.IsSpecificTime)
+        @Html.ValidationMessageFor(model => model.IsSpecificTime)
+    </div>
+
+
+
+
+
+
+    <div class="form-group full_width">
+        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create Task" onclick="return validateLogin();" />
+    </div>
+    }
+
+
+
+    </div>
+

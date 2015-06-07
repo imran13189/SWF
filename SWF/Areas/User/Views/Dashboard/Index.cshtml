@@ -1,0 +1,76 @@
+﻿@using SWF.Models
+@using SWF.Classes
+@model UsersModel
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+ $(document).ready(function () {
+
+        var x = '@ViewBag.Message';
+        debugger;
+        if (x != "") {
+            alert(x);
+        }
+      
+      
+ });
+    </script>
+<div class="inner_pages_bx">
+    <div class="container">
+
+        <div class="listing_table">
+            <div class="col-lg-9 col-md-9">
+                <h2 class="project-title">DashBoard</h2>
+
+                <div class="full-row">
+                    <div class="col-lg-6 no_margin">
+                        
+                        <h3 class="active-title">
+                            <a href="~/User/UserProfile/AgentProfile/@ViewBag.AgentId"><img height="120" width="100" src="~/Images/noImage.jpg" /></a></h3>
+                    </div>
+
+                    <div class="col-lg-6 no_margin">
+                        <div class="margin_div">
+                            <div class="btn_only">
+                                @Html.ActionLink("New Task", "Add", "Task",new { Area = "User" }, htmlAttributes: new { @class = "btn btn-primary" })
+                            </div>
+                            
+                        </div>
+                        <div class="margin_div">
+                            <div class="btn_only">
+                                @Html.ActionLink("Open Task", "List", "Task", new {Area="User"}, htmlAttributes: new { @class = "btn btn-primary" })
+                            </div>
+                          
+                        </div>
+                          <div class="margin_div">
+                            <div class="btn_only">
+                                @Html.ActionLink("User Profile", "CustomerProfile", "UserProfile", routeValues:  null, htmlAttributes: new { @class = "btn btn-primary" })
+                            </div>
+                            
+                        </div>
+                          <div class="margin_div">
+                              <div class="btn_only">
+                          How Much User Spend ? Need To discuss
+                                  </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="grid-holder" style="border:1px solid #dfdfdf">
+                   Here completed tasks will show in grid
+                </div>
+                
+            </div>
+
+
+            <div class="col-lg-3 col-md-3">
+               
+            </div>
+        </div>
+
+    </div>
+</div>

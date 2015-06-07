@@ -1,0 +1,44 @@
+﻿@using SWF.Models
+@model UsersModel
+
+<h3 class="login-main-title">Login</h3>
+<div class="login_bx">
+    <div class="row">
+        @using(Html.BeginForm("login", "Home", FormMethod.Post, htmlAttributes: new { id = "frmLogin", @class="col-md-12", autocomplete="off" }))
+        {
+            @*<input style="display:none">*@
+            <input type="password" style="display:none">
+            @Html.HiddenFor(m => m.Username, htmlAttributes: new { id = "hdnUsername" })
+            @Html.HiddenFor(m => m.Password, htmlAttributes: new { id = "hdnPassword" })
+            <div class="form-group">
+                @*@Html.TextBoxFor(m => m.Username, htmlAttributes: new { @class="form-control input-lg", placeholder="Username", name = "text1" })*@
+                <input type="text" name="text1" class="form-control input-lg" placeholder="Username" />
+                @Html.ValidationMessageFor(m => m.Username)
+            </div>
+            
+            <div class="form-group">
+                @*@Html.PasswordFor(m => m.Password, htmlAttributes: new { @class="form-control input-lg", placeholder="Password", name = "text2" })*@
+                <input type="text" style="display:none;">
+                <input type="password" name="text2" class="form-control input-lg" placeholder="Password" />
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+            
+            @*<div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        Remember me
+                    </label>
+                </div>
+            </div>*@
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Sign In" onclick="return validateLogin();" />
+                <span class="top-margin left">
+                    <a href="#">Forget Password?</a>
+                </span>
+            </div>
+        }
+
+    </div>
+</div>

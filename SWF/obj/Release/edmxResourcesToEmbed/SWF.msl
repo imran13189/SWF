@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SWFModelStoreContainer" CdmEntityContainer="SWFEntities">
+    <EntitySetMapping Name="tblAssignedUsers">
+      <EntityTypeMapping TypeName="SWFModel.tblAssignedUser">
+        <MappingFragment StoreEntitySet="tblAssignedUser">
+          <ScalarProperty Name="AssignID" ColumnName="AssignID" />
+          <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tUsers">
+      <EntityTypeMapping TypeName="SWFModel.tUser">
+        <MappingFragment StoreEntitySet="tUser">
+          <ScalarProperty Name="intUserId" ColumnName="intUserId" />
+          <ScalarProperty Name="strFirstName" ColumnName="strFirstName" />
+          <ScalarProperty Name="strLastName" ColumnName="strLastName" />
+          <ScalarProperty Name="strUserName" ColumnName="strUserName" />
+          <ScalarProperty Name="strPassword" ColumnName="strPassword" />
+          <ScalarProperty Name="intBaseRoleId" ColumnName="intBaseRoleId" />
+          <ScalarProperty Name="dtCreatedOn" ColumnName="dtCreatedOn" />
+          <ScalarProperty Name="dtModifiedOn" ColumnName="dtModifiedOn" />
+          <ScalarProperty Name="strEmail" ColumnName="strEmail" />
+          <ScalarProperty Name="strAddress" ColumnName="strAddress" />
+          <ScalarProperty Name="strPhoneNumber" ColumnName="strPhoneNumber" />
+          <ScalarProperty Name="strRefCode" ColumnName="strRefCode" />
+          <ScalarProperty Name="strBestWay" ColumnName="strBestWay" />
+          <ScalarProperty Name="blActive" ColumnName="blActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTasks">
+      <EntityTypeMapping TypeName="SWFModel.tblTask">
+        <MappingFragment StoreEntitySet="tblTasks">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="TaskTime" ColumnName="TaskTime" />
+          <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

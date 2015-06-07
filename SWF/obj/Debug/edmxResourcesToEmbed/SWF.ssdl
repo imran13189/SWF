@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AppointmentDiary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SomeImportantKey" Type="int" Nullable="false" />
+    <Property Name="DateTimeScheduled" Type="datetime" Nullable="false" />
+    <Property Name="AppointmentLength" Type="int" Nullable="false" />
+    <Property Name="StatusENUM" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAssignedUser">
+    <Key>
+      <PropertyRef Name="AssignID" />
+    </Key>
+    <Property Name="AssignID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AgentID" Type="bigint" />
+    <Property Name="UserID" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblTasks">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TaskName" Type="varchar" MaxLength="1000" />
+    <Property Name="TaskTime" Type="datetime" Nullable="false" />
+    <Property Name="SpecificTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpecialRequest" Type="nvarchar(max)" />
+    <Property Name="IsSpecificTime" Type="bit" Nullable="false" />
+    <Property Name="IsCompleted" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="AssignedTo" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="tUser">
+    <Key>
+      <PropertyRef Name="intUserId" />
+    </Key>
+    <Property Name="intUserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="strFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="strLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="strUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="strPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="intBaseRoleId" Type="int" Nullable="false" />
+    <Property Name="dtCreatedOn" Type="date" Nullable="false" />
+    <Property Name="dtModifiedOn" Type="date" />
+    <Property Name="strEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="strAddress" Type="nvarchar" MaxLength="180" />
+    <Property Name="strPhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="strRefCode" Type="varchar" MaxLength="500" />
+    <Property Name="strBestWay" Type="nvarchar" MaxLength="1000" />
+    <Property Name="blActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SWFModelStoreContainer">
+    <EntitySet Name="AppointmentDiary" EntityType="Self.AppointmentDiary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAssignedUser" EntityType="Self.tblAssignedUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTasks" EntityType="Self.tblTasks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tUser" EntityType="Self.tUser" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

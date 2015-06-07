@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWFModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SWFEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAssignedUsers" EntityType="SWFModel.tblAssignedUser" />
+    <EntitySet Name="tUsers" EntityType="SWFModel.tUser" />
+  </EntityContainer>
+  <EntityType Name="tblAssignedUser">
+    <Key>
+      <PropertyRef Name="AssignID" />
+    </Key>
+    <Property Name="AssignID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AgentID" Type="Int64" />
+    <Property Name="UserID" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tUser">
+    <Key>
+      <PropertyRef Name="intUserId" />
+    </Key>
+    <Property Name="intUserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="strFirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="strLastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="strUserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="strPassword" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="intBaseRoleId" Type="Int32" Nullable="false" />
+    <Property Name="dtCreatedOn" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dtModifiedOn" Type="DateTime" Precision="0" />
+    <Property Name="strEmail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="strAddress" Type="String" MaxLength="180" Unicode="true" FixedLength="false" />
+    <Property Name="strPhoneNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strRefCode" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="strBestWay" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="blActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>

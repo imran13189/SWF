@@ -1,0 +1,36 @@
+﻿@using SWF.Models
+@model List<ProjectModel>
+
+<table id="tblProjects" class="table-responsive projects-grid">
+
+    <tr>
+        <th>Project Name</th>
+        <th>Price</th>
+        <th>Upload Date</th>
+        <th>Estimate Approval Date</th>
+        <th>Delivery Date</th>
+        <th>Actual Delivery Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+
+    @{
+        foreach (ProjectModel item in Model)
+        {
+        <tr data-id="@(item.ProjectID)">
+            <td>@item.ProjectName</td>
+            <td>@((item.Price.HasValue) ? item.Price.Value.ToString("C") : string.Empty)</td>
+            <td>@((item.CreatedDate.HasValue) ? item.CreatedDate.Value.ToString("MM-dd-yyyy") : string.Empty)</td>
+            <td>@((item.EstimateApprovalDate.HasValue) ? item.EstimateApprovalDate.Value.ToString("MM-dd-yyyy") : string.Empty)</td>
+            <td>@((item.DeliveryDate.HasValue) ? item.DeliveryDate.Value.ToString("MM-dd-yyyy") : string.Empty)</td>
+            <td>@((item.ActualDeliveryDate.HasValue) ? item.ActualDeliveryDate.Value.ToString("MM-dd-yyyy") : string.Empty)</td>
+            <td>@item.StatusText</td>
+            <td>
+                <a href="@Url.Action("ViewTranslation", "Translations", routeValues: new { id = item.ProjectID})">View</a>
+                <a href="@Url.Action("ClaimTranslation", "Translations", routeValues: new { id = item.ProjectID })">Edit</a>
+                <a href="@Url.Action("Delete", "Translations", routeValues: new { id = item.ProjectID })">Delete</a>
+            </td>
+        </tr>
+        }
+    }
+</table>

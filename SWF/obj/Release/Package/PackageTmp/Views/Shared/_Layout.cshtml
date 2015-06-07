@@ -1,0 +1,106 @@
+﻿@using SWF.Classes
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/jquery", "~/bundles/modernizr", "~/bundles/jqueryval", "~/bundles/bootStrap", "~/bundles/script")
+        <link href="~/Content/bootstrap-3.1.1.min.css" rel="stylesheet" />
+@*<link href="~/Content/bootstrap-multiselect.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.11.1.js"></script>
+<script src="~/Scripts/jquery-1.8.2.js"></script>*@
+<script src="~/Scripts/bootstrap-2.3.2.min.js"></script>
+<script src="~/Scripts/bootstrap-multiselect.js"></script>
+    </head>
+    <body>
+        <header>
+            @{ 
+                if ((Request.IsAuthenticated) && (SessionAccesser.GetRole().Equals(1)))
+                {
+                    Html.RenderAction("Header", "Dashboard");
+                }
+                else if ((Request.IsAuthenticated) && (SessionAccesser.GetRole().Equals(2)))
+                {
+                    Html.RenderAction("Header", "Dashboard");
+                }
+                else if ((Request.IsAuthenticated) && (SessionAccesser.GetRole().Equals(3)))
+                {
+                    Html.RenderAction("Header", "Dashboard");
+                }
+                else
+                {
+                    Html.RenderAction("Header", "Home");
+                }
+            }
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+
+            <div class="foot-frame">
+              <div class="top-foot-frame">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-foot-box">
+                      <h4>Service Work Flow</h4>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bot-foot-frame">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bot-foot-box">
+                      <ul class="social-media list-inline">
+                        <li> <span class="img"> <a href="#"><img src="~/Images/bot-foot-fb.png" alt="" /></a> </span> </li>
+                        <li> <span class="img"> <a href="#"><img src="~/Images/bot-foot-tw.png" alt="" /></a> </span> </li>
+                        <li> <span class="img"> <a href="#"><img src="~/Images/bot-foot-g-plus.png" alt="" /></a> </span> </li>
+                        <li> <span class="img"> <a href="#"><img src="~/Images/bot-foot-yt.png" alt="" /></a> </span> </li>
+                      </ul>
+                      <ul class="menu list-inline">
+                        <li><a href="@Url.Action("Index", "Home", routeValues: new { area = "" })">Home</a></li>
+                        <li><a href="@Url.Action("About", "Home", routeValues: new { area = "" })">About Us</a></li>
+                       
+                        <li><a href="@Url.Action("Contact", "Home", routeValues: new { area = "" })">Contact</a></li>
+                      </ul>
+                      <p>&copy;Copyright @DateTime.Now.Year - <span>Service Work Flow</span>. All rights reserved.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            @*<div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>*@
+        </footer>
+    </body>
+    <script id="dynamicScript">
+
+    </script>
+</html>
+<script>
+    
+        $("#Chk_File").click(function () {
+            $("#fileDocumentUpload").show();
+            $("#Text_data").hide();
+            $('#Chk_Text').attr('checked', false);
+        });
+        $("#Chk_Text").click(function () {
+            $("#Text_data").show();
+            $("#fileDocumentUpload").hide();
+            $('#Chk_File').attr('checked', false);
+        });
+</script>

@@ -1,0 +1,10 @@
+H:\My projects\SWF\SWF\bin\SWF.dll
+H:\My projects\SWF\SWF\bin\SWF.pdb
+H:\My projects\SWF\SWF\bin\System.Net.Http.dll
+H:\My projects\SWF\SWF\bin\System.Net.Http.WebRequest.dll
+H:\My projects\SWF\SWF\bin\System.Web.Providers.dll
+H:\My projects\SWF\SWF\bin\System.Net.Http.xml
+H:\My projects\SWF\SWF\bin\System.Net.Http.WebRequest.xml
+H:\My projects\SWF\SWF\obj\Release\SWF.dll
+H:\My projects\SWF\SWF\obj\Release\SWF.pdb
+H:\My projects\SWF\SWF\obj\Release\SWF.csprojResolveAssemblyReference.cache

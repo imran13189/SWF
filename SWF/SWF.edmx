@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SWFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppointmentDiary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SomeImportantKey" Type="int" Nullable="false" />
+          <Property Name="DateTimeScheduled" Type="datetime" Nullable="false" />
+          <Property Name="AppointmentLength" Type="int" Nullable="false" />
+          <Property Name="StatusENUM" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblAssignedUser">
+          <Key>
+            <PropertyRef Name="AssignID" />
+          </Key>
+          <Property Name="AssignID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AgentID" Type="bigint" />
+          <Property Name="UserID" Type="bigint" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tblTasks">
+          <Key>
+            <PropertyRef Name="TaskId" />
+          </Key>
+          <Property Name="TaskId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TaskName" Type="varchar" MaxLength="1000" />
+          <Property Name="TaskTime" Type="datetime" Nullable="false" />
+          <Property Name="SpecificTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="SpecialRequest" Type="nvarchar(max)" />
+          <Property Name="IsSpecificTime" Type="bit" Nullable="false" />
+          <Property Name="IsCompleted" Type="bit" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="AssignedTo" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int" />
+        </EntityType>
+        <EntityType Name="tUser">
+          <Key>
+            <PropertyRef Name="intUserId" />
+          </Key>
+          <Property Name="intUserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="strFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="strLastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="strUserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="strPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="intBaseRoleId" Type="int" Nullable="false" />
+          <Property Name="dtCreatedOn" Type="date" Nullable="false" />
+          <Property Name="dtModifiedOn" Type="date" />
+          <Property Name="strEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="strAddress" Type="nvarchar" MaxLength="180" />
+          <Property Name="strPhoneNumber" Type="varchar" MaxLength="50" />
+          <Property Name="strRefCode" Type="varchar" MaxLength="500" />
+          <Property Name="strBestWay" Type="nvarchar" MaxLength="1000" />
+          <Property Name="blActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SWFModelStoreContainer">
+          <EntitySet Name="AppointmentDiary" EntityType="Self.AppointmentDiary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblAssignedUser" EntityType="Self.tblAssignedUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTasks" EntityType="Self.tblTasks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tUser" EntityType="Self.tUser" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SWFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AppointmentDiary">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SomeImportantKey" Type="Int32" Nullable="false" />
+          <Property Name="DateTimeScheduled" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AppointmentLength" Type="Int32" Nullable="false" />
+          <Property Name="StatusENUM" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblAssignedUser">
+          <Key>
+            <PropertyRef Name="AssignID" />
+          </Key>
+          <Property Name="AssignID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AgentID" Type="Int64" />
+          <Property Name="UserID" Type="Int64" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tblTask">
+          <Key>
+            <PropertyRef Name="TaskId" />
+          </Key>
+          <Property Name="TaskId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TaskName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="TaskTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SpecificTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SpecialRequest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsSpecificTime" Type="Boolean" Nullable="false" />
+          <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="AssignedTo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tUser">
+          <Key>
+            <PropertyRef Name="intUserId" />
+          </Key>
+          <Property Name="intUserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="strFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="strLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="strUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="strPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="intBaseRoleId" Type="Int32" Nullable="false" />
+          <Property Name="dtCreatedOn" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dtModifiedOn" Type="DateTime" Precision="0" />
+          <Property Name="strEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="strAddress" Type="String" MaxLength="180" FixedLength="false" Unicode="true" />
+          <Property Name="strPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="strRefCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="strBestWay" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="blActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SWFEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AppointmentDiaries" EntityType="Self.AppointmentDiary" />
+          <EntitySet Name="tblAssignedUsers" EntityType="Self.tblAssignedUser" />
+          <EntitySet Name="tblTasks" EntityType="Self.tblTask" />
+          <EntitySet Name="tUsers" EntityType="Self.tUser" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SWFModelStoreContainer" CdmEntityContainer="SWFEntities">
+          <EntitySetMapping Name="AppointmentDiaries">
+            <EntityTypeMapping TypeName="SWFModel.AppointmentDiary">
+              <MappingFragment StoreEntitySet="AppointmentDiary">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="SomeImportantKey" ColumnName="SomeImportantKey" />
+                <ScalarProperty Name="DateTimeScheduled" ColumnName="DateTimeScheduled" />
+                <ScalarProperty Name="AppointmentLength" ColumnName="AppointmentLength" />
+                <ScalarProperty Name="StatusENUM" ColumnName="StatusENUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblAssignedUsers">
+            <EntityTypeMapping TypeName="SWFModel.tblAssignedUser">
+              <MappingFragment StoreEntitySet="tblAssignedUser">
+                <ScalarProperty Name="AssignID" ColumnName="AssignID" />
+                <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTasks">
+            <EntityTypeMapping TypeName="SWFModel.tblTask">
+              <MappingFragment StoreEntitySet="tblTasks">
+                <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+                <ScalarProperty Name="TaskTime" ColumnName="TaskTime" />
+                <ScalarProperty Name="SpecificTime" ColumnName="SpecificTime" />
+                <ScalarProperty Name="SpecialRequest" ColumnName="SpecialRequest" />
+                <ScalarProperty Name="IsSpecificTime" ColumnName="IsSpecificTime" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tUsers">
+            <EntityTypeMapping TypeName="SWFModel.tUser">
+              <MappingFragment StoreEntitySet="tUser">
+                <ScalarProperty Name="intUserId" ColumnName="intUserId" />
+                <ScalarProperty Name="strFirstName" ColumnName="strFirstName" />
+                <ScalarProperty Name="strLastName" ColumnName="strLastName" />
+                <ScalarProperty Name="strUserName" ColumnName="strUserName" />
+                <ScalarProperty Name="strPassword" ColumnName="strPassword" />
+                <ScalarProperty Name="intBaseRoleId" ColumnName="intBaseRoleId" />
+                <ScalarProperty Name="dtCreatedOn" ColumnName="dtCreatedOn" />
+                <ScalarProperty Name="dtModifiedOn" ColumnName="dtModifiedOn" />
+                <ScalarProperty Name="strEmail" ColumnName="strEmail" />
+                <ScalarProperty Name="strAddress" ColumnName="strAddress" />
+                <ScalarProperty Name="strPhoneNumber" ColumnName="strPhoneNumber" />
+                <ScalarProperty Name="strRefCode" ColumnName="strRefCode" />
+                <ScalarProperty Name="strBestWay" ColumnName="strBestWay" />
+                <ScalarProperty Name="blActive" ColumnName="blActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

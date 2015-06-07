@@ -1,0 +1,121 @@
+﻿@using SWF.Models
+@model UsersModel
+
+
+<div class="top-bar-frame">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-bar-box">
+                <div class="row">
+                    <div class="co-lg-3 col-md-4 col-sm-4 col-xs-6 left-box">
+                        <ul class="social-media list-inline">
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-mail.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-g-plus.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-fb.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-tw.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-in.png" alt="" /></a> </span></li>
+                        </ul>
+                    </div>
+                    <div class="co-lg-3 col-md-4 col-sm-4 col-xs-6 right-box">
+                        <ul class="top-info list-inline">
+                            <li>
+                              
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <li>Welcome @(Model.FirstName)</li>
+                                <li><a href="@Url.Action("Logout", "Home")">Logout</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="@Url.Action("Login", "Home")">Login</a> </li>
+                                <li><a href="@Url.Action("Register", "Home")">Sign Up</a> </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header-frame">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header">
+                <div class="row">
+                    <div class="co-lg-2 col-md-2 col-sm-2 col-xs-6 left-box">
+                        <span class="logo">
+                            <a href="@Url.Action("Index", "Home")">
+                                <img src="~/Images/logo.png" alt="@Url.Action("Index", "Home")" /></a>
+                        </span>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 right-box">
+                      @*  <form role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control mac-style" name="Search" id='nav-search' placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                        </form>*@
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 mid-box">
+                        <nav class="navbar navbar-default">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="@Url.Action("Index", "Home")" class="active">Home</a></li>
+                                    @*<li><a href="#">My Account</a></li>
+                                    <li><a href="@Url.Action("Dashboard", "Client")">Dashboard</a></li>*@
+                                    @*<li><a href="#">Claim Translation</a></li>
+                                    <li><a href="#">Letter Translation</a></li>*@
+
+
+                                    @if (Request.IsAuthenticated)
+                                    {
+                                        <li><a href="@Url.Action("Dashboard", "Client")">Dashboard</a></li>
+                                        <li><a href="#">Translations</a>
+                                            <ul>
+                                                <li><a href="/Client/Translations/ClaimTranslation">Claim Translation</a></li>
+                                                <li><a href="#">Letter Translation</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Reports</a></li>
+                                        <li><a href="#">More..</a>
+                                            <ul class="nav111">
+                                                <li><a href="#">My Account</a></li>
+                                                <li style="border-bottom: 1px solid #dcdcdc"><a href="#">Support</a></li>
+                                                <li><a href="#">Contact us</a></li>
+                                            </ul>
+                                        </li>
+                                    
+                                    }
+                                    else
+                                    {
+                                       <li><a href="#">About us</a></li>
+                                        <li><a href="#">Contact us</a></li>
+                                    }
+
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

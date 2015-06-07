@@ -1,0 +1,22 @@
+﻿@using SWF.Models
+@model UsersModel
+@{
+    ViewBag.Title = "Agent Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="inner_pages_bx contact_bg">
+    <div class="container">
+
+        <div class="listing_table">
+
+            <h2 class="project-title">Agent Profile</h2>
+
+                  @{ Html.RenderPartial("_Profile",Model); }  
+
+        </div>
+    </div>
+</div>
+
+
+

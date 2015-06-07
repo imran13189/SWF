@@ -1,0 +1,21 @@
+H:\My projects\SWF\SWF\bin\SWF.dll
+H:\My projects\SWF\SWF\bin\SWF.pdb
+H:\My projects\SWF\SWF\bin\System.Net.Http.dll
+H:\My projects\SWF\SWF\bin\System.Net.Http.WebRequest.dll
+H:\My projects\SWF\SWF\bin\System.Web.Providers.dll
+H:\My projects\SWF\SWF\bin\System.Net.Http.xml
+H:\My projects\SWF\SWF\bin\System.Net.Http.WebRequest.xml
+H:\My projects\SWF\SWF\obj\Debug\SWF.dll
+H:\My projects\SWF\SWF\obj\Debug\SWF.pdb
+H:\My projects\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache
+G:\SWF (2) latest\SWF\SWF\bin\SWF.dll.config
+G:\SWF (2) latest\SWF\SWF\bin\SWF.dll
+G:\SWF (2) latest\SWF\SWF\bin\SWF.pdb
+G:\SWF (2) latest\SWF\SWF\bin\System.Net.Http.dll
+G:\SWF (2) latest\SWF\SWF\bin\System.Net.Http.WebRequest.dll
+G:\SWF (2) latest\SWF\SWF\bin\System.Web.Providers.dll
+G:\SWF (2) latest\SWF\SWF\bin\System.Net.Http.xml
+G:\SWF (2) latest\SWF\SWF\bin\System.Net.Http.WebRequest.xml
+G:\SWF (2) latest\SWF\SWF\obj\Debug\SWF.dll
+G:\SWF (2) latest\SWF\SWF\obj\Debug\SWF.pdb
+G:\SWF (2) latest\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache

@@ -1,0 +1,65 @@
+﻿@using SWF.Models
+@model UsersModel
+
+
+                 
+ 
+                    
+
+<div class="full-row">
+                        
+                    <div class="col-lg-6 no_margin">
+                        <div class="full-row">
+                            <h4 class="translate_head"><b>First Name</b></h4>
+
+                            @Model.FirstName<br />
+                            
+                        </div>
+
+                        
+
+                        <div class="full-row">
+                            <h4 class="translate_head"><b>Last Name</b></h4>
+                            @Model.LastName
+
+                        </div>
+
+                        
+
+                        <div class="full-row">
+                            <h4 class="translate_head"><b>Email Address</b></h4>
+                           @Model.Email
+
+                        </div>
+
+                        
+
+
+                    </div>
+
+                    <div class="col-lg-6 no_margin">
+                    <div class="full-row">
+
+                            <h4 class="translate_head"><b> Address</b></h4>
+
+                           @Model.Address
+
+                        </div>
+                    <div class="full-row">
+                            <h4 class="translate_head"><b>Phone Number</b></h4>
+                            @Model.PhoneNumber
+                        </div>
+                    <div class="full-row">
+                            <h4 class="translate_head"><b>Best Way to reach you</b></h4>
+                         @Model.BestWayToReachYou
+
+                        </div>
+                
+
+
+                </div>
+                    
+    </div>
+
+   
+

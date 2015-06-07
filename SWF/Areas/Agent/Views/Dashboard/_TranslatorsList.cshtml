@@ -1,0 +1,46 @@
+﻿@using SWF.Models
+@using SWF.Classes
+@model List<UsersModel>
+
+@{   
+   //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    //$(document).ready(function () {
+    //    debugger;
+    //    $('#NewBrowserBtn').on('click', function () {
+    //        window.open('/Client/Conversation/Index', '', 'width=450,height=250,toolbar=no,menubar=no,resizable=0');
+    //    });
+    //});
+</script>
+
+
+   @* <h3>Online Translators</h3>*@
+@*<button id="NewBrowserBtn">New Browser</button>*@
+  @*href="javascript:void(0);"*@
+
+
+
+
+@*<div id="divUsers" class="translators-list">*@
+
+<div class="inner_pages_bx contact_bg no_bg">
+    <div class="container1">
+    <h3>Online Translators</h3>
+    
+    <div class="margin-top">
+        @{
+            foreach(UsersModel user in Model)
+            {
+                using (Html.BeginForm("Index", "Conversation", new { id = user.ID, area = "" }, FormMethod.Get, htmlAttributes: new { id = "frmInitConversation-" + user.ID, target = "conversationPopup-" + user.ID })) 
+                {
+                    <a class="available-translator"  data-id="@(user.ID)">@user.FirstName&nbsp;@user.LastName</a>
+                    
+                    <span style="font-size:11px;">@user.LanguageModel.Name</span>
+                }
+            }
+        }
+    </div>
+
+        </div>
+</div>

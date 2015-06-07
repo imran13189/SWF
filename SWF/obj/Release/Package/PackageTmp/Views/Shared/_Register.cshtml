@@ -1,0 +1,57 @@
+﻿@using SWF.Models
+@model UsersModel
+
+<h3 class="login-main-title">Sign Up</h3>
+  
+<div class="login_bx register_page">
+    <h4 style="color:green;">@ViewBag.ErrorMessage</h4>
+    <div class="row">
+        @using (Html.BeginForm("Register", "Home", FormMethod.Post, htmlAttributes: new { id = "frmRegister", @class = "col-md-12", autocomplete = "off" }))
+        {
+            <div class="form-group half_width">
+                @Html.TextBoxFor(m => m.FirstName, htmlAttributes: new { placeholder = "First Name", @class = "form-control input-lg" })
+                @Html.ValidationMessageFor(m => m.FirstName)
+            </div>
+            <div class="form-group half_width right">
+                @Html.TextBoxFor(m => m.LastName, htmlAttributes: new { placeholder = "Last Name", @class = "form-control input-lg" })
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+             <div class="form-group full_width">
+                @Html.TextBoxFor(m => m.Email, htmlAttributes: new { placeholder = "Email Address", @class = "form-control input-lg", maxlength = "50" })
+              
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+            <div class="form-group full_width">
+                @Html.TextBoxFor(m => m.PhoneNumber, htmlAttributes: new { placeholder = "Phone Number", @class = "form-control input-lg" })
+               
+                @Html.ValidationMessageFor(m => m.PhoneNumber)
+                 
+            </div>
+           
+            
+            <div class="form-group full_width">
+                <input style="display:none"/> 
+                @Html.TextBoxFor(m => m.Address, htmlAttributes: new { placeholder = "Address", @class = "form-control input-lg" })
+                @Html.ValidationMessageFor(m => m.Address)
+            </div>
+          
+            
+          
+            <div class="form-group full_width">
+                <input style="display:none"/> 
+                @Html.TextBoxFor(m => m.BestWayToReachYou, htmlAttributes: new { placeholder = "Best Way To Reach You", @class = "form-control input-lg" })
+               
+            </div>
+            
+            <div class="form-group full_width">
+                @Html.TextBoxFor(m => m.ReferalCode, htmlAttributes: new { placeholder = "Referal Code", @class = "form-control input-lg" })
+               
+            </div>
+          
+
+            <div class="form-group full_width">
+                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create an Account" onclick="return validateLogin();" />
+            </div>
+        }
+    </div>
+</div>

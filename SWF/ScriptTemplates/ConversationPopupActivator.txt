@@ -1,0 +1,26 @@
+﻿$(activatePopup{receiver});
+
+function activatePopup{receiver}()
+{
+	var popupName{receiver} = 'conversationPopup-{receiver}',
+		popup{receiver} = isPopupAlreadyOpened(popupName{receiver});
+
+	if(popup{receiver} === null){
+		var htmlString{receiver} = '<form action="/Conversation/Index/{receiver}" method="get" id="frmInitConversation-{receiver}" target="'+popupName{receiver}+'">'+
+										'<a class="available-user" data-id="{receiver}">{receiverName}</a>'+
+									'</form>';
+		$(htmlString{receiver}).appendTo('body');
+
+		popup{receiver} = window.open('', popupName{receiver}, 'width=420,height=220,scrollbars=0,toolbars=0,titlebar=0,menubar=0,resizable=0');
+		openedPopups.push(popup{receiver});
+		popup{receiver}.focus();
+		$('#frmInitConversation-{receiver}').trigger('submit');
+		popup{receiver}.onbeforeunload = function () {
+			$('body > #frmInitConversation-{receiver}').remove();
+			removePopup(popupName{receiver});
+		};
+	}
+	else{
+	
+	}
+}

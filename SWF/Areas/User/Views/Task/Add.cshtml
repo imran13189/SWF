@@ -1,0 +1,118 @@
+﻿@model SWF.tblTask
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery.timepicker.js"></script>
+<link href="~/Content/jquery.timepicker.css" rel="stylesheet" />
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $(".datepicker").datepicker({});
+
+        $('.timePicker').timepicker();
+
+
+
+
+        $("CheckTime").change(function () {
+            if ($(this).is(':checked')) {
+
+                $("#time").show();
+            }
+            else {
+
+                $("#time").hide();
+            }
+         });
+
+
+    });
+</script>
+
+<div class="inner_pages_bx">
+    <div class="container">
+
+        <div class="listing_table">
+
+            <h2 class="project-title">New Task</h2>
+
+            @using (Html.BeginForm())
+            {
+                 @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+
+                 <div class="Error_Message">@ViewData["error"]</div>
+                <div class="full-row">
+                        
+                    <div class="col-lg-6 no_margin">
+                        <div class="full-row">
+                            <h4 class="translate_head">Task Name</h4>
+
+                      
+            @Html.TextBoxFor(model => model.TaskName, htmlAttributes: new { placeholder = "Task Name", @class = "form-control input-lg" })
+            @Html.ValidationMessageFor(model => model.TaskName)
+                        </div>
+
+                        
+
+                        <div class="full-row">
+                            <h4 class="translate_head">Task Date</h4>
+                          
+
+        @Html.TextBoxFor(model => model.TaskTime,new {  placeholder = "Task Date", @class = "datepicker form-control input-lg" })
+        @Html.ValidationMessageFor(model => model.TaskTime)
+
+                        </div>
+
+                        
+
+                     
+
+                        
+
+
+                    </div>
+
+                    <div class="col-lg-6 no_margin">
+                    <div class="full-row">
+
+                            <h4 class="translate_head">Special Request</h4>
+                        
+        @Html.TextBoxFor(model => model.SpecialRequest, htmlAttributes: new {placeholder="Special Request", @class = "form-control input-lg" })
+        @Html.ValidationMessageFor(model => model.SpecialRequest)
+
+                        </div>
+                    <div class="full-row">
+                            <h4 class="translate_head">Specific time</h4>
+                           
+        @Html.TextBoxFor(model => model.SpecificTime, htmlAttributes: new { placeholder = "Specific Time", @class = "timePicker form-control input-lg" })
+        @Html.ValidationMessageFor(model => model.SpecificTime)
+
+                        </div>
+                       
+                    <div class="full-row">
+                            
+
+                        </div>
+                    @*<div class="full-row">
+                    </div>*@
+                        </div>
+                    <div class="full-row top_mrgn">
+                        <input type="submit" value="Save Tasks" style="margin:20px;" name="Update" class="btn btn-primary btn-create" />
+                        <a class="btn btn-primary btn-create" style="margin:20px;" href="@Url.Action("Index", "Dashboard")">Cancel</a>
+                    </div>
+
+
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+
+

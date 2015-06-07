@@ -1,0 +1,73 @@
+﻿@using SWF.Models
+@model UsersModel
+
+@{
+    ViewBag.Title = "Register";
+}
+<style>
+        .popup {
+   float: left;
+z-index: 1000;
+display: block !important;
+margin: 4px;
+position: fixed;
+background-color: #7FFFD4;
+height: 121px;
+text-align: center;
+padding: 40px;
+width: 437px;
+margin-left: 68px;
+font-size: 19px;
+        }
+    #close {
+       float: right;
+padding: 0px;
+color: #F00;
+margin-top: -40px;
+background-color: #DEDEC5;
+padding: 2px;
+margin-right: -39px;
+cursor:pointer;
+
+background-color: #F5F5DC;
+    }
+    </style>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var x = '@ViewBag.SuccessMessage';
+        debugger;
+        if (x != "") {
+            $(".popup").css("visibility","visible");
+        }
+        else {
+            $(".popup").css("visibility", "hidden");
+        }
+        $("#close").click(function () {
+            $(".popup").css("visibility", "hidden");
+        });
+    });
+
+   
+</script>
+<div class="inner_pages_bx">
+    <div class="container">
+
+        <div class="col-lg-6">
+            @{ Html.RenderPartial("_Login", Model); }
+        </div>
+
+        <div class="col-lg-6">
+            @{ Html.RenderPartial("_Register", Model); }
+        </div>
+        
+
+       
+           <div class="popup" style="visibility:hidden;">
+               <div id="close">X</div>
+            Thank you for your interest on us, we will contact you as soon as possible.
+        </div>
+           
+       
+    </div>
+</div>

@@ -1,0 +1,184 @@
+﻿@using SWF.Models
+@model SWF.Models.UsersModel
+@{
+    ViewBag.Title = "AsignUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+
+<style>
+    .form-control
+    {
+        width: 40%;
+    }
+</style>
+
+<script  type="text/javascript">
+    var $ = jQuery.noConflict();
+    $(document).ready(function () {
+
+
+        $("#save").click(function () {
+            var myArray = [];
+            debugger; 
+            $("#ChooseRight option").each(function () {
+
+                if ($(this).is(':selected'))
+                {
+                    myArray.push($(this).val());
+                }
+               
+            });
+          
+            var userIds = myArray.join(",");
+            var agentID =  $('#istateid :selected').val();
+         
+           
+            $.ajax({
+                type: "POST",
+                url: "SaveUsers",
+                data: JSON.stringify({ userids: myArray, agentid: parseInt(agentID) }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function (response) {
+                    if (response != null && response != undefined) {
+                        alert(response);
+                    }
+                },
+                error: function () {
+                    alert(response);
+                    // Handle errors here
+                }
+            });
+        });
+    });
+   
+
+        $(function () {
+
+            $("#ShiftRight,#ShiftLeft").click(function (event) {
+                debugger;
+                var ID = $(event.target).attr("ID");
+
+                var ChooseFrom = ID == "ShiftRight" ? "#lstUsers" : "#ChooseRight";
+
+                var moveTo = ID == "ShiftRight" ? "#ChooseRight" : "#lstUsers";
+
+ 
+
+                var SelectData = $(ChooseFrom + " :selected").toArray();
+               
+
+
+                $(moveTo).append(SelectData);
+
+                SelectData.remove;
+               
+                });
+
+
+             
+
+            });
+
+       
+
+    </script>   
+
+
+<div class="inner_pages_bx contact_bg">
+    <div class="container">
+
+        <div class="listing_table">
+
+            <h2 class="project-title">Assign Users To Agents</h2>
+
+            @using (Html.BeginForm("SaveUsers", "Dashboard", FormMethod.Post, htmlAttributes: new { id = "frmAddEditTranslatorClient" }))
+            {
+                @Html.HiddenFor(m => m.UserID, htmlAttributes: new { id = "hdnUserID" })
+
+                <div class="full-row">
+
+                    <div class="col-lg-6 no_margin">
+                     
+                             
+
+                      
+                            <div class="full-row">
+                                <h4 class="translate_head">Agents</h4>
+                                <div class="select-style1">
+                                @Html.DropDownList("istateid", new SelectList(Model.lstAgents,"UserId","FirstName"));
+                                </div>
+                               
+                            </div>    
+                    <div class="full-row">
+                                <h4 class="translate_head">Users</h4>
+                                <div class="select-style1">
+                                @Html.ListBoxFor(model => model.lstUsers, new MultiSelectList(Model.lstUsers, "UserId",    "FirstName"));  
+                                </div>
+                               
+                            </div>
+                      
+
+                    </div>
+
+                    <div class="col-lg-6 no_margin">
+                              <div class="full-row">
+                            <h4 class="translate_head">Selected Users</h4>
+                                  <div class="select-style1">
+                             <select id="ChooseRight" multiple="multiple">
+
+            </select>
+                                      </div>
+                        </div>
+                          <div class="full-row">
+                              <input  name="AssignUser" id="save" style="margin-top:30px;" value="AssignUser"  class="btn btn-primary" />
+                        
+                       </div>
+                         <div class="full-row">
+                       
+                       </div>
+                          
+                       
+                    </div>
+
+                    <div class="full-row">
+                    </div>
+
+                    <div class="full-row top_mrgn">
+                         <input id="ShiftRight"  value="Add" name="ShiftRight" style="width:80px;margin:20px;" class="btn btn-primary" />
+                          <input  id="ShiftLeft" value="Remove" name="ShiftLeft" style="width:80px;margin:20px;" class="btn btn-primary" />
+                      
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>
+@*<script src="~/Scripts/jquery-1.11.1.js"></script>
+<script>
+    
+    $('#TargetLanguage').change(function () {
+        debugger;
+        var value = $('#TargetLanguage').val();
+        $.ajax({
+            url: "/Admin/Dashboard/AssignTranslator",
+            type: "POST",
+            data: {
+                name : $('#TargetLanguage').val()
+            },
+            success: function () {
+                debugger;
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                debugger;
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        });
+    });
+</script>*@

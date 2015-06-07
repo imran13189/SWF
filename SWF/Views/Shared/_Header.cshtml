@@ -1,0 +1,151 @@
+﻿@using SWF.Classes
+@using SWF.Models
+@model UsersModel
+
+
+<div class="top-bar-frame">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 top-bar-box">
+                <div class="row">
+                    @if (Request.IsAuthenticated)
+                    {
+                        <input type="hidden" id="hdnRoleName" name="RoleName" value="@(Model.RoleId)" />
+                    }
+                    <div class="co-lg-3 col-md-4 col-sm-4 col-xs-6 left-box">
+                        <ul class="social-media list-inline">
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-mail.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-g-plus.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-fb.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-tw.png" alt="" /></a> </span></li>
+                            <li><span class="img"><a href="#">
+                                <img src="~/Images/social-media-in.png" alt="" /></a> </span></li>
+                        </ul>
+                    </div>
+                   
+                    <div class="co-lg-3 col-md-4 col-sm-4 col-xs-6 right-box">
+                        <ul class="top-info list-inline">
+                          @*  <li>
+                                <img src="~/Images/phone.png" alt="" />
+                                your phone</li>*@
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                               if (Model.RoleId==1)
+                                {
+                                <li>Welcome Admin</li>
+                                }
+                                else
+                                {
+                                <li>Welcome @(Model.FirstName)</li>
+                                }
+                               
+                                <li><a href="~/Home/Logout">Logout</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="@Url.Action("Login", "Home", routeValues: new { area = "" })">Login</a> </li>
+                                <li><a href="@Url.Action("Register", "Home", routeValues: new { area = "" })">Sign Up</a> </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header-frame">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 header">
+                <div class="row">
+                    <div class="co-lg-2 col-md-2 col-sm-2 col-xs-6 left-box">
+                        <span class="logo">
+                            <a href="@Url.Action("Index", "Home", routeValues: new { area = "" })">
+                                <img src="~/Images/logo.png" alt="@Url.Action("Index", "Home", routeValues: new { area = "" })" /></a>
+                        </span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4 right-box">
+                        <form role="search">
+                            <div class="form-group">
+                          @*      <input type="text" class="form-control mac-style" name="Search" id='nav-search' placeholder="Search">*@
+                            </div>
+                         @*   <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>*@
+                        </form>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mid-box">
+                        <nav class="navbar navbar-default">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    @{
+                                        if ((Request.IsAuthenticated) && (Model.RoleId==1))
+                                        {
+                                            <li><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>
+                                            <li><a href="@Url.Action("AssignUser", "Dashboard")">Assign Users To Agents</a></li>@*
+                                            <li><a href="@Url.Action("Index", "Clients")">Clients</a></li>
+                                            <li><a href="@Url.Action("Index", "Translators")">Translators</a></li>
+                                            <li><a href="@Url.Action("Index", "ProjectManagerClient")">PM Client</a></li>*@
+                                            @*<li><a href="@Url.Action("Index", "QualityAssurance")">Quality Assurance</a></li>*@
+                                        }
+                                         else if ((Request.IsAuthenticated) && (Model.RoleId == 2))
+                                        {
+                                            <li><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>@*
+                                            <li><a href="#">Translations</a>
+                                                <ul>
+                                                    <li><a href="@Url.Action("ClaimTranslation", "Translations")">Claim Translation</a></li>
+                                                    <li><a href="@Url.Action("TextTranslation","Translations")">Letter Translation</a></li>
+                                                    <li><a href="javascript:void(0);">Order Document Translation</a></li>
+                                                </ul>
+                                            </li>*@
+                                            <li><a href="@Url.Action("MyAccount","UserProfile")">My Account</a></li>
+                                        <li><a href="@Url.Action("ContactUs","UserProfile")">Contact us</a></li>@*
+
+                                            <li><a href="#">More..</a>
+                                                <ul class="nav111">
+                                                     <li><a href="@Url.Action("MyAccount", "UserProfile")">My Account</a></li>
+                                                    <li style="border-bottom: 1px solid #dcdcdc"><a href="#">Support</a></li>
+                                                    <li><a href="#">Contact us</a></li>
+                                                </ul>
+                                            </li>*@
+                                        }
+                                        else if ((Request.IsAuthenticated) && (Model.RoleId ==3))
+                                        {
+                                            <li><a href="@Url.Action("Index", "Dashboard")">Dashboard</a></li>
+                                            <li><a href="#">Documents Translated</a></li>
+                                            <li><a href="@Url.Action("LetterTranslation", "Translations")">Letter Translation</a></li>
+                                            <li><a href="#">Reports</a></li>
+                                            <li><a href="@Url.Action("MyAccount", "TranslatorProfile")">My Account</a></li>
+                                        }
+                                        else
+                                        {
+                                            <li><a href="@Url.Action("Index", "Home", routeValues: new { area = "" })" class="active">Home</a></li>@*
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Support</a></li>*@
+                                            <li><a href="#">Contact us</a></li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

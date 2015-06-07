@@ -1,0 +1,292 @@
+D:\Deepak\SWF\SWF\bin\SWF.dll
+D:\Deepak\SWF\SWF\bin\SWF.pdb
+D:\Deepak\SWF\SWF\bin\Antlr3.Runtime.dll
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.AspNet.dll
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.Core.dll
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OAuth.dll
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OpenId.dll
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\Deepak\SWF\SWF\bin\EntityFramework.dll
+D:\Deepak\SWF\SWF\bin\Microsoft.Web.Infrastructure.dll
+D:\Deepak\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Deepak\SWF\SWF\bin\Newtonsoft.Json.dll
+D:\Deepak\SWF\SWF\bin\System.Net.Http.Formatting.dll
+D:\Deepak\SWF\SWF\bin\System.Web.Helpers.dll
+D:\Deepak\SWF\SWF\bin\System.Web.Http.dll
+D:\Deepak\SWF\SWF\bin\System.Web.Http.WebHost.dll
+D:\Deepak\SWF\SWF\bin\System.Web.Mvc.dll
+D:\Deepak\SWF\SWF\bin\System.Web.Optimization.dll
+D:\Deepak\SWF\SWF\bin\System.Web.Razor.dll
+D:\Deepak\SWF\SWF\bin\System.Web.WebPages.Deployment.dll
+D:\Deepak\SWF\SWF\bin\System.Web.WebPages.dll
+D:\Deepak\SWF\SWF\bin\System.Web.WebPages.Razor.dll
+D:\Deepak\SWF\SWF\bin\WebGrease.dll
+D:\Deepak\SWF\SWF\bin\WebMatrix.Data.dll
+D:\Deepak\SWF\SWF\bin\WebMatrix.WebData.dll
+D:\Deepak\SWF\SWF\bin\EntityFramework.xml
+D:\Deepak\SWF\SWF\bin\Newtonsoft.Json.xml
+D:\Deepak\SWF\SWF\bin\System.Net.Http.Formatting.xml
+D:\Deepak\SWF\SWF\bin\System.Web.Helpers.xml
+D:\Deepak\SWF\SWF\bin\System.Web.Http.xml
+D:\Deepak\SWF\SWF\bin\System.Web.Http.WebHost.xml
+D:\Deepak\SWF\SWF\bin\System.Web.Mvc.xml
+D:\Deepak\SWF\SWF\bin\System.Web.Razor.xml
+D:\Deepak\SWF\SWF\bin\System.Web.WebPages.xml
+D:\Deepak\SWF\SWF\bin\System.Web.WebPages.Deployment.xml
+D:\Deepak\SWF\SWF\bin\System.Web.WebPages.Razor.xml
+D:\Deepak\SWF\SWF\bin\WebMatrix.Data.xml
+D:\Deepak\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Deepak\SWF\SWF\bin\WebMatrix.WebData.xml
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.AspNet.xml
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.Core.xml
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OAuth.xml
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OpenId.xml
+D:\Deepak\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\Deepak\SWF\SWF\obj\Debug\SWF.dll
+D:\Deepak\SWF\SWF\obj\Debug\SWF.pdb
+E:\Project\SWF\SWF\bin\SWF.dll
+E:\Project\SWF\SWF\bin\SWF.pdb
+E:\Project\SWF\SWF\bin\Antlr3.Runtime.dll
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.AspNet.dll
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.Core.dll
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OAuth.dll
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OpenId.dll
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Project\SWF\SWF\bin\EntityFramework.dll
+E:\Project\SWF\SWF\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Project\SWF\SWF\bin\Newtonsoft.Json.dll
+E:\Project\SWF\SWF\bin\System.Net.Http.Formatting.dll
+E:\Project\SWF\SWF\bin\System.Web.Helpers.dll
+E:\Project\SWF\SWF\bin\System.Web.Http.dll
+E:\Project\SWF\SWF\bin\System.Web.Http.WebHost.dll
+E:\Project\SWF\SWF\bin\System.Web.Mvc.dll
+E:\Project\SWF\SWF\bin\System.Web.Optimization.dll
+E:\Project\SWF\SWF\bin\System.Web.Razor.dll
+E:\Project\SWF\SWF\bin\System.Web.WebPages.Deployment.dll
+E:\Project\SWF\SWF\bin\System.Web.WebPages.dll
+E:\Project\SWF\SWF\bin\System.Web.WebPages.Razor.dll
+E:\Project\SWF\SWF\bin\WebGrease.dll
+E:\Project\SWF\SWF\bin\WebMatrix.Data.dll
+E:\Project\SWF\SWF\bin\WebMatrix.WebData.dll
+E:\Project\SWF\SWF\bin\EntityFramework.xml
+E:\Project\SWF\SWF\bin\Newtonsoft.Json.xml
+E:\Project\SWF\SWF\bin\System.Net.Http.Formatting.xml
+E:\Project\SWF\SWF\bin\System.Web.Helpers.xml
+E:\Project\SWF\SWF\bin\System.Web.Http.xml
+E:\Project\SWF\SWF\bin\System.Web.Http.WebHost.xml
+E:\Project\SWF\SWF\bin\System.Web.Mvc.xml
+E:\Project\SWF\SWF\bin\System.Web.Razor.xml
+E:\Project\SWF\SWF\bin\System.Web.WebPages.xml
+E:\Project\SWF\SWF\bin\System.Web.WebPages.Deployment.xml
+E:\Project\SWF\SWF\bin\System.Web.WebPages.Razor.xml
+E:\Project\SWF\SWF\bin\WebMatrix.Data.xml
+E:\Project\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Project\SWF\SWF\bin\WebMatrix.WebData.xml
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.AspNet.xml
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.Core.xml
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OAuth.xml
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OpenId.xml
+E:\Project\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Project\SWF\SWF\obj\Debug\SWF.dll
+E:\Project\SWF\SWF\obj\Debug\SWF.pdb
+E:\Project\New\SWF\SWF\bin\SWF.dll
+E:\Project\New\SWF\SWF\bin\SWF.pdb
+E:\Project\New\SWF\SWF\bin\Antlr3.Runtime.dll
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.AspNet.dll
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.Core.dll
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.dll
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.dll
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Project\New\SWF\SWF\bin\EntityFramework.dll
+E:\Project\New\SWF\SWF\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\New\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Project\New\SWF\SWF\bin\Newtonsoft.Json.dll
+E:\Project\New\SWF\SWF\bin\System.Net.Http.Formatting.dll
+E:\Project\New\SWF\SWF\bin\System.Web.Helpers.dll
+E:\Project\New\SWF\SWF\bin\System.Web.Http.dll
+E:\Project\New\SWF\SWF\bin\System.Web.Http.WebHost.dll
+E:\Project\New\SWF\SWF\bin\System.Web.Mvc.dll
+E:\Project\New\SWF\SWF\bin\System.Web.Optimization.dll
+E:\Project\New\SWF\SWF\bin\System.Web.Razor.dll
+E:\Project\New\SWF\SWF\bin\System.Web.WebPages.Deployment.dll
+E:\Project\New\SWF\SWF\bin\System.Web.WebPages.dll
+E:\Project\New\SWF\SWF\bin\System.Web.WebPages.Razor.dll
+E:\Project\New\SWF\SWF\bin\WebGrease.dll
+E:\Project\New\SWF\SWF\bin\WebMatrix.Data.dll
+E:\Project\New\SWF\SWF\bin\WebMatrix.WebData.dll
+E:\Project\New\SWF\SWF\bin\EntityFramework.xml
+E:\Project\New\SWF\SWF\bin\Newtonsoft.Json.xml
+E:\Project\New\SWF\SWF\bin\System.Net.Http.Formatting.xml
+E:\Project\New\SWF\SWF\bin\System.Web.Helpers.xml
+E:\Project\New\SWF\SWF\bin\System.Web.Http.xml
+E:\Project\New\SWF\SWF\bin\System.Web.Http.WebHost.xml
+E:\Project\New\SWF\SWF\bin\System.Web.Mvc.xml
+E:\Project\New\SWF\SWF\bin\System.Web.Razor.xml
+E:\Project\New\SWF\SWF\bin\System.Web.WebPages.xml
+E:\Project\New\SWF\SWF\bin\System.Web.WebPages.Deployment.xml
+E:\Project\New\SWF\SWF\bin\System.Web.WebPages.Razor.xml
+E:\Project\New\SWF\SWF\bin\WebMatrix.Data.xml
+E:\Project\New\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Project\New\SWF\SWF\bin\WebMatrix.WebData.xml
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.AspNet.xml
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.Core.xml
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.xml
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.xml
+E:\Project\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Project\New\SWF\SWF\obj\Debug\SWF.dll
+E:\Project\New\SWF\SWF\obj\Debug\SWF.pdb
+E:\Project\New\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache
+F:\Imran\New\SWF\SWF\bin\SWF.dll
+F:\Imran\New\SWF\SWF\bin\SWF.pdb
+F:\Imran\New\SWF\SWF\bin\Antlr3.Runtime.dll
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.AspNet.dll
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.Core.dll
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.dll
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.dll
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\Imran\New\SWF\SWF\bin\EntityFramework.dll
+F:\Imran\New\SWF\SWF\bin\Microsoft.Web.Infrastructure.dll
+F:\Imran\New\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Imran\New\SWF\SWF\bin\Newtonsoft.Json.dll
+F:\Imran\New\SWF\SWF\bin\System.Net.Http.Formatting.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.Helpers.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.Http.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.Http.WebHost.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.Mvc.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.Optimization.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.Razor.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.WebPages.Deployment.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.WebPages.dll
+F:\Imran\New\SWF\SWF\bin\System.Web.WebPages.Razor.dll
+F:\Imran\New\SWF\SWF\bin\WebGrease.dll
+F:\Imran\New\SWF\SWF\bin\WebMatrix.Data.dll
+F:\Imran\New\SWF\SWF\bin\WebMatrix.WebData.dll
+F:\Imran\New\SWF\SWF\bin\EntityFramework.xml
+F:\Imran\New\SWF\SWF\bin\Newtonsoft.Json.xml
+F:\Imran\New\SWF\SWF\bin\System.Net.Http.Formatting.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.Helpers.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.Http.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.Http.WebHost.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.Mvc.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.Razor.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.WebPages.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.WebPages.Deployment.xml
+F:\Imran\New\SWF\SWF\bin\System.Web.WebPages.Razor.xml
+F:\Imran\New\SWF\SWF\bin\WebMatrix.Data.xml
+F:\Imran\New\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Imran\New\SWF\SWF\bin\WebMatrix.WebData.xml
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.AspNet.xml
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.Core.xml
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OAuth.xml
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.xml
+F:\Imran\New\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\Imran\New\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache
+F:\Imran\New\SWF\SWF\obj\Debug\SWF.dll
+F:\Imran\New\SWF\SWF\obj\Debug\SWF.pdb
+F:\my projects\SWF\SWF\bin\SWF.dll
+F:\my projects\SWF\SWF\bin\SWF.pdb
+F:\my projects\SWF\SWF\bin\Antlr3.Runtime.dll
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.AspNet.dll
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.Core.dll
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.dll
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.dll
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.dll
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+F:\my projects\SWF\SWF\bin\EntityFramework.dll
+F:\my projects\SWF\SWF\bin\Microsoft.Web.Infrastructure.dll
+F:\my projects\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\my projects\SWF\SWF\bin\Newtonsoft.Json.dll
+F:\my projects\SWF\SWF\bin\System.Net.Http.Formatting.dll
+F:\my projects\SWF\SWF\bin\System.Web.Helpers.dll
+F:\my projects\SWF\SWF\bin\System.Web.Http.dll
+F:\my projects\SWF\SWF\bin\System.Web.Http.WebHost.dll
+F:\my projects\SWF\SWF\bin\System.Web.Mvc.dll
+F:\my projects\SWF\SWF\bin\System.Web.Optimization.dll
+F:\my projects\SWF\SWF\bin\System.Web.Razor.dll
+F:\my projects\SWF\SWF\bin\System.Web.WebPages.Deployment.dll
+F:\my projects\SWF\SWF\bin\System.Web.WebPages.dll
+F:\my projects\SWF\SWF\bin\System.Web.WebPages.Razor.dll
+F:\my projects\SWF\SWF\bin\WebGrease.dll
+F:\my projects\SWF\SWF\bin\WebMatrix.Data.dll
+F:\my projects\SWF\SWF\bin\WebMatrix.WebData.dll
+F:\my projects\SWF\SWF\bin\EntityFramework.xml
+F:\my projects\SWF\SWF\bin\Newtonsoft.Json.xml
+F:\my projects\SWF\SWF\bin\System.Net.Http.Formatting.xml
+F:\my projects\SWF\SWF\bin\System.Web.Helpers.xml
+F:\my projects\SWF\SWF\bin\System.Web.Http.xml
+F:\my projects\SWF\SWF\bin\System.Web.Http.WebHost.xml
+F:\my projects\SWF\SWF\bin\System.Web.Mvc.xml
+F:\my projects\SWF\SWF\bin\System.Web.Razor.xml
+F:\my projects\SWF\SWF\bin\System.Web.WebPages.xml
+F:\my projects\SWF\SWF\bin\System.Web.WebPages.Deployment.xml
+F:\my projects\SWF\SWF\bin\System.Web.WebPages.Razor.xml
+F:\my projects\SWF\SWF\bin\WebMatrix.Data.xml
+F:\my projects\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\my projects\SWF\SWF\bin\WebMatrix.WebData.xml
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.AspNet.xml
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.Core.xml
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.xml
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.xml
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.xml
+F:\my projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+F:\my projects\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache
+F:\my projects\SWF\SWF\obj\Debug\SWF.dll
+F:\my projects\SWF\SWF\obj\Debug\SWF.pdb
+H:\My projects\SWF\SWF\bin\SWF.dll
+H:\My projects\SWF\SWF\bin\SWF.pdb
+H:\My projects\SWF\SWF\bin\Antlr3.Runtime.dll
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.AspNet.dll
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.Core.dll
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.dll
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.dll
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.dll
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+H:\My projects\SWF\SWF\bin\EntityFramework.dll
+H:\My projects\SWF\SWF\bin\Microsoft.Web.Infrastructure.dll
+H:\My projects\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.dll
+H:\My projects\SWF\SWF\bin\Newtonsoft.Json.dll
+H:\My projects\SWF\SWF\bin\System.Net.Http.Formatting.dll
+H:\My projects\SWF\SWF\bin\System.Web.Helpers.dll
+H:\My projects\SWF\SWF\bin\System.Web.Http.dll
+H:\My projects\SWF\SWF\bin\System.Web.Http.WebHost.dll
+H:\My projects\SWF\SWF\bin\System.Web.Mvc.dll
+H:\My projects\SWF\SWF\bin\System.Web.Optimization.dll
+H:\My projects\SWF\SWF\bin\System.Web.Razor.dll
+H:\My projects\SWF\SWF\bin\System.Web.WebPages.Deployment.dll
+H:\My projects\SWF\SWF\bin\System.Web.WebPages.dll
+H:\My projects\SWF\SWF\bin\System.Web.WebPages.Razor.dll
+H:\My projects\SWF\SWF\bin\WebGrease.dll
+H:\My projects\SWF\SWF\bin\WebMatrix.Data.dll
+H:\My projects\SWF\SWF\bin\WebMatrix.WebData.dll
+H:\My projects\SWF\SWF\bin\EntityFramework.xml
+H:\My projects\SWF\SWF\bin\Newtonsoft.Json.xml
+H:\My projects\SWF\SWF\bin\System.Net.Http.Formatting.xml
+H:\My projects\SWF\SWF\bin\System.Web.Helpers.xml
+H:\My projects\SWF\SWF\bin\System.Web.Http.xml
+H:\My projects\SWF\SWF\bin\System.Web.Http.WebHost.xml
+H:\My projects\SWF\SWF\bin\System.Web.Mvc.xml
+H:\My projects\SWF\SWF\bin\System.Web.Razor.xml
+H:\My projects\SWF\SWF\bin\System.Web.WebPages.xml
+H:\My projects\SWF\SWF\bin\System.Web.WebPages.Deployment.xml
+H:\My projects\SWF\SWF\bin\System.Web.WebPages.Razor.xml
+H:\My projects\SWF\SWF\bin\WebMatrix.Data.xml
+H:\My projects\SWF\SWF\bin\Microsoft.Web.WebPages.OAuth.xml
+H:\My projects\SWF\SWF\bin\WebMatrix.WebData.xml
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.AspNet.xml
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.Core.xml
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.Consumer.xml
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OAuth.xml
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.xml
+H:\My projects\SWF\SWF\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+H:\My projects\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache
+H:\My projects\SWF\SWF\obj\Debug\SWF.dll
+H:\My projects\SWF\SWF\obj\Debug\SWF.pdb

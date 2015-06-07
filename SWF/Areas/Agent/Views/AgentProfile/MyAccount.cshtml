@@ -1,0 +1,88 @@
+﻿@using SWF.Models
+@model ProfileModel
+@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="inner_pages_bx contact_bg">
+    <div class="container">
+
+        <div class="listing_table">
+
+            <h2 class="project-title">My Account Form</h2>
+
+            @using (Html.BeginForm("UpdateRecord", "ClientProfile", FormMethod.Post, htmlAttributes: new { id = "", enctype = "multipart/form-data" }))
+            {
+                 <div class="Error_Message">@ViewData["error"]</div>
+                <div class="full-row">
+                        
+                    <div class="col-lg-6 no_margin">
+                        <div class="full-row">
+                            <h4 class="translate_head">First Name</h4>
+
+                            @Html.TextBoxFor(m => m.FirstName)<br />
+                            @Html.ValidationMessageFor(m => m.FirstName)
+                        </div>
+
+                        
+
+                        <div class="full-row">
+                            <h4 class="translate_head">Email</h4>
+                            @Html.TextBoxFor(m => m.Email)
+                            @Html.ValidationMessageFor(m => m.Email)
+
+                        </div>
+
+                        
+
+                        <div class="full-row">
+                            <h4 class="translate_head">New Password</h4>
+                            @Html.PasswordFor(m => m.NewPassword)
+                            @Html.ValidationMessageFor(m => m.NewPassword)
+
+                        </div>
+
+                        
+
+
+                    </div>
+
+                    <div class="col-lg-6 no_margin">
+                    <div class="full-row">
+
+                            <h4 class="translate_head">Last Name</h4>
+
+                            @Html.TextBoxFor(m => m.LastName)
+                            @Html.ValidationMessageFor(m => m.LastName)
+
+                        </div>
+                    <div class="full-row">
+                            <h4 class="translate_head">Old Password</h4>
+                            @Html.PasswordFor(m => m.Password)
+                            @Html.ValidationMessageFor(m => m.Password)
+
+                        </div>
+                    <div class="full-row">
+                            <h4 class="translate_head">Confirm Password</h4>
+                            @Html.PasswordFor(m => m.ConfirmPassword)
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+
+                        </div>
+                    @*<div class="full-row">
+                    </div>*@
+                        </div>
+                    <div class="full-row top_mrgn">
+                        <input type="submit" value="Update" name="Update" class="btn btn-primary btn-create" />
+                        <a class="btn btn-default btn-cancel" href="@Url.Action("Index", "Dashboard")">Cancel</a>
+                    </div>
+
+
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+

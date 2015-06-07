@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SWFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AppointmentDiary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SomeImportantKey" Type="Int32" Nullable="false" />
+    <Property Name="DateTimeScheduled" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AppointmentLength" Type="Int32" Nullable="false" />
+    <Property Name="StatusENUM" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblAssignedUser">
+    <Key>
+      <PropertyRef Name="AssignID" />
+    </Key>
+    <Property Name="AssignID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AgentID" Type="Int64" />
+    <Property Name="UserID" Type="Int64" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblTask">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TaskName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="TaskTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SpecificTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialRequest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsSpecificTime" Type="Boolean" Nullable="false" />
+    <Property Name="IsCompleted" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="AssignedTo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tUser">
+    <Key>
+      <PropertyRef Name="intUserId" />
+    </Key>
+    <Property Name="intUserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="strFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="strLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="strUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="strPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="intBaseRoleId" Type="Int32" Nullable="false" />
+    <Property Name="dtCreatedOn" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dtModifiedOn" Type="DateTime" Precision="0" />
+    <Property Name="strEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="strAddress" Type="String" MaxLength="180" FixedLength="false" Unicode="true" />
+    <Property Name="strPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="strRefCode" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="strBestWay" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="blActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SWFEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AppointmentDiaries" EntityType="Self.AppointmentDiary" />
+    <EntitySet Name="tblAssignedUsers" EntityType="Self.tblAssignedUser" />
+    <EntitySet Name="tblTasks" EntityType="Self.tblTask" />
+    <EntitySet Name="tUsers" EntityType="Self.tUser" />
+  </EntityContainer>
+</Schema>
