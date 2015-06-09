@@ -29,3 +29,4 @@ H:\SWF\SWF\bin\System.Net.Http.xml
 H:\SWF\SWF\bin\System.Net.Http.WebRequest.xml
 H:\SWF\SWF\obj\Debug\SWF.dll
 H:\SWF\SWF\obj\Debug\SWF.pdb
+H:\SWF\SWF\obj\Debug\SWF.csprojResolveAssemblyReference.cache

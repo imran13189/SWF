@@ -21,14 +21,34 @@ namespace SWF.Areas.User.Controllers
 
         public ActionResult Add()
         {
-            return View();
+            return View(new TaskModel().GetModel());
         }
 
         [HttpPost]
-        public ActionResult Add(tblTask model)
+        public ActionResult Add(TaskModel model)
         {
             TaskModel taskmodel = new TaskModel();
-            if (taskmodel.AddTask(model))
+            if (taskmodel.AddTask(model.task))
+            {
+                return RedirectToAction("List");
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+                return View(new TaskModel().GetTask(id));
+        }
+
+        [HttpPost]
+        public ActionResult Edit(tblTask model)
+        {
+            TaskModel taskmodel = new TaskModel();
+            if (taskmodel.UpdateTask(model))
             {
                 return RedirectToAction("List");
             }

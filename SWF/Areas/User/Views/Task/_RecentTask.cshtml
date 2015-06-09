@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SWF.tblTask>
+
+<div class="grid-holder">
+
+
+    <table id="tblProjects" class="table-responsive projects-grid">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.TaskName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TaskTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecificTime)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+
+            
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaskName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaskTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpecificTime)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOn)
+                </td>
+
+               
+            </tr>
+        }
+    </table>
+</div>

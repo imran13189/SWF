@@ -350,9 +350,10 @@
     <Content Include="Areas\User\Views\UserProfile\AgentProfile.cshtml" />
     <Content Include="obj\Release\Package\PackageTmp\Areas\Admin\Views\Dashboard\AssignUser.cshtml" />
     <Content Include="Areas\User\Views\UserProfile\ContactUs.cshtml" />
-    <Content Include="Areas\User\Views\Task\Add1.cshtml" />
+    <Content Include="Areas\User\Views\Task\Edit.cshtml" />
     <Content Include="Areas\User\Views\Task\List.cshtml" />
     <Content Include="Areas\User\Views\Task\Add.cshtml" />
+    <Content Include="Areas\User\Views\Task\_RecentTask.cshtml" />
     <None Include="Properties\PublishProfiles\Vipin.pubxml" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\add-file-icon.png" />
